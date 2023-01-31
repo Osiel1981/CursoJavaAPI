@@ -54,9 +54,11 @@ public class TesteDbApplication implements CommandLineRunner{
 		List<String> cursoPorNomeAreaQuery = cursoRepository.findByQueryNomePorArea();
 		cursoPorNomeAreaQuery.forEach( curso -> System.out.println(curso));
 	*/
-		List<String> ConsultaPorAreaInformada = cursoRepository.findbyQueryPorAreaInformada("Ciencias Humanas");
-		ConsultaPorAreaInformada.forEach( curso -> System.out.println(curso));
+		//List<String> ConsultaPorAreaInformada = cursoRepository.findbyQueryPorAreaInformada("Ciencias Humanas");
+		//ConsultaPorAreaInformada.forEach( curso -> System.out.println(curso));
 		
+		List<String> consultaPorParametros = cursoRepository.findbyQuerymultiploParametros("Ciencias Humanas", "Graduação em biologia");
+		consultaPorParametros.forEach(curso -> System.out.println(curso));
 		
 		//alterando os dados do curso2
 		//curso2.setNome("Engenharia Química");
