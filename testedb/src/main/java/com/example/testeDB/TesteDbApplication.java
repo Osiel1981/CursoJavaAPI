@@ -43,12 +43,19 @@ public class TesteDbApplication implements CommandLineRunner{
 		//List<Curso> ListaContendoParte = cursoRepository.findCursoByNameLikeIgnoreCase("%GiA%");
 		//ListaContendoParte.forEach(curso -> System.out.println(curso));
 		
+		
+	/*	Aqui faço uma consulta no BD usando a inteface cursoRepository 
+		 Retornando uma Lista com todos os cursos.
 		List<Curso> consultaPorQuery = cursoRepository.findByQuery();
 		consultaPorQuery.forEach(curso -> System.out.println(curso));
+	*/
 		
+	/*	
 		List<String> cursoPorNomeAreaQuery = cursoRepository.findByQueryNomePorArea();
 		cursoPorNomeAreaQuery.forEach( curso -> System.out.println(curso));
-		
+	*/
+		List<String> ConsultaPorAreaInformada = cursoRepository.findbyQueryPorAreaInformada("Ciencias Humanas");
+		ConsultaPorAreaInformada.forEach( curso -> System.out.println(curso));
 		
 		
 		//alterando os dados do curso2

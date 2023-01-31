@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import com.example.testeDB.entities.Curso;
 
@@ -22,12 +23,16 @@ public interface CursoRepository extends JpaRepository<Curso, Integer> {
 	List<Curso> findCursoByNameLikeIgnoreCase(String name);
 	
 	
-	//consulta usando a anotation 
+	//consulta usando a anotation @Query selecionando nomes do curso de curso.
+	//Retornando todos os cursos. findByQuery precisa ser o nome da funcão
 	@Query(value = "select c nome_do_curso From Curso c")
 	List<Curso> findByQuery();
 	
+	//Consulta para retornar lista de "nome_do_curso", da tabela curso_java, que atenderem ao where. usando native Query.
 	@Query(value = "select nome_do_curso from curso_java where area = 'Administração'", nativeQuery = true)
 	List<String> findByQueryNomePorArea();
 
-
+	//Usei nativeQuery com @Param(parametro) e assinatura) levando em consideração o area= :area
+	@Query(value = "select nome_do_curso from curso_java where area = :area", nativeQuery = true)
+	List<String> findbyQueryPorAreaInformada(@Param("area")String area);
 }
