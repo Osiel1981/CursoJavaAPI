@@ -1,7 +1,5 @@
 package com.example.testeDB;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -9,8 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.testeDB.entities.Aluno;
 import com.example.testeDB.entities.Curso;
+import com.example.testeDB.entities.Grade;
 import com.example.testeDB.repositories.AlunoRepository;
 import com.example.testeDB.repositories.CursoRepository;
+import com.example.testeDB.repositories.GradeRepository;
 
 @SpringBootApplication
 public class TesteDbApplication implements CommandLineRunner{
@@ -21,6 +21,9 @@ public class TesteDbApplication implements CommandLineRunner{
 	@Autowired
 	private AlunoRepository alunoRepository;
 	
+	@Autowired
+	private GradeRepository gradeRepository;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(TesteDbApplication.class, args);
 		
@@ -30,7 +33,7 @@ public class TesteDbApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		Curso curso1 = new Curso("Graduação em Economia", "Administração");
 		Curso curso2 = new Curso("Mestrado em Economia", "Administração");
-		Curso curso3 = new Curso("Graduação em biologia", "Ciencias Humanas");
+		Curso curso3 = new Curso("Graduação em biologia", "Ciencias naturais");
 		Curso curso4 = new Curso("Tecnologia em Processos Gerenciais", "Administração");
 		
 		cursoRepository.save(curso1);
@@ -39,10 +42,15 @@ public class TesteDbApplication implements CommandLineRunner{
 		cursoRepository.save(curso4);
 		
 		Aluno aluno1 = new Aluno("Osiel Mesquita",curso2);
-		
+		Aluno aluno2 = new Aluno("Joquim Oliveira",curso3);
+
 		
 		alunoRepository.save(aluno1);
+		alunoRepository.save(aluno2);
+
+		Grade grade1 = new Grade("Ong de animais", aluno2);
 		
+		gradeRepository.save(grade1);
 		
 		//List<Curso> listaDeCursos = cursoRepository.findAll();
 		//listaDeCursos.forEach(curso -> System.out.println(curso.toString()));

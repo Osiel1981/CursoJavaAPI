@@ -6,5 +6,5 @@ import com.example.testeDB.entities.Aluno;
 
 public interface AlunoRepository extends JpaRepository<Aluno, Integer>{
 	
-
+	
 }
