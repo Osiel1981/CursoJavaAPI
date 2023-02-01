@@ -1,0 +1,67 @@
+{"properties": [
+  {
+    "name": "spring.logging.level.org.hibernate.type",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.logging.level.org.hibernate.type'"
+  },
+  {
+    "name": "org.hibernate.type.descriptor.sql",
+    "type": "java.lang.String",
+    "description": "A description for 'org.hibernate.type.descriptor.sql'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.SQL",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.SQL'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.orm.jdbc.bind",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.orm.jdbc.bind'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.stat",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.stat'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.SQL_SLOW",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.SQL_SLOW'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.cache",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.cache'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.SQL",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.SQL'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.SQL",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.SQL'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.SQL",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.SQL'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.type",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.type'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.type",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.type'"
+  },
+  {
+    "name": "log4j.logger.org.hibernate.tool.hbm2ddl",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.logger.org.hibernate.tool.hbm2ddl'"
+  }
+]}
