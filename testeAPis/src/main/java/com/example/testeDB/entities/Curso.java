@@ -7,6 +7,8 @@ import java.util.List;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,12 +32,13 @@ public class Curso {
 	@Column(nullable = false)
 	private String area;
 
-	
-	@CreationTimestamp
+	@JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss") //formata a data e hora no json
+	@CreationTimestamp //carimba a data e hora do momento
 	@Column(name = "data_criacao")
 	private LocalDateTime dataDeCriacao;
 	
-	@UpdateTimestamp
+	@JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss") //formata a data e hora no json
+	@UpdateTimestamp //carimba a data e hora do momento
 	@Column(name = "data_atualizacao")
 	private LocalDateTime dataDeAtualizacao;
 	

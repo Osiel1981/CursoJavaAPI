@@ -35,11 +35,13 @@ public class TesteDbApplication implements CommandLineRunner{
 		Curso curso2 = new Curso("Mestrado em Economia", "Administração");
 		Curso curso3 = new Curso("Graduação em biologia", "Ciencias naturais");
 		Curso curso4 = new Curso("Tecnologia em Processos Gerenciais", "Administração");
-		
+		Curso curso5 = new Curso("Tecnologia Recursos Humanos", "Administração");
+
 		cursoRepository.save(curso1);
 		cursoRepository.save(curso2);
 		cursoRepository.save(curso3);
 		cursoRepository.save(curso4);
+		cursoRepository.save(curso5);
 		
 		//Aluno aluno1 = new Aluno("Osiel Mesquita",curso2);
 		//Aluno aluno2 = new Aluno("Joquim Oliveira",curso3);
