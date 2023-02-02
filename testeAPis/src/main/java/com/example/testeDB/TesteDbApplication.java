@@ -41,16 +41,16 @@ public class TesteDbApplication implements CommandLineRunner{
 		cursoRepository.save(curso3);
 		cursoRepository.save(curso4);
 		
-		Aluno aluno1 = new Aluno("Osiel Mesquita",curso2);
-		Aluno aluno2 = new Aluno("Joquim Oliveira",curso3);
+		//Aluno aluno1 = new Aluno("Osiel Mesquita",curso2);
+		//Aluno aluno2 = new Aluno("Joquim Oliveira",curso3);
 
 		
-		alunoRepository.save(aluno1);
-		alunoRepository.save(aluno2);
+		//alunoRepository.save(aluno1);
+		//alunoRepository.save(aluno2);
 
-		Grade grade1 = new Grade("Ong de animais", aluno2);
+		//Grade grade1 = new Grade("Ong de animais", aluno2);
 		
-		gradeRepository.save(grade1);
+		//gradeRepository.save(grade1);
 		
 		//List<Curso> listaDeCursos = cursoRepository.findAll();
 		//listaDeCursos.forEach(curso -> System.out.println(curso.toString()));

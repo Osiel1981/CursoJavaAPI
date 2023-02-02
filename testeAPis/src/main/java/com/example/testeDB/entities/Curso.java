@@ -1,7 +1,11 @@
 package com.example.testeDB.entities;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,6 +30,15 @@ public class Curso {
 	@Column(nullable = false)
 	private String area;
 
+	
+	@CreationTimestamp
+	@Column(name = "data_criacao")
+	private LocalDateTime dataDeCriacao;
+	
+	@UpdateTimestamp
+	@Column(name = "data_atualizacao")
+	private LocalDateTime dataDeAtualizacao;
+	
 	public Curso() {
 	}
 	

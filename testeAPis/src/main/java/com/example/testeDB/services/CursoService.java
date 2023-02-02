@@ -1,5 +1,9 @@
 package com.example.testeDB.services;
 
-public interface CursoService {
+import java.util.List;
 
+import com.example.testeDB.entities.Curso;
+
+public interface CursoService {
+	public List<Curso> getCursos();
 }
